@@ -55,6 +55,7 @@ function matchQuery(text = "") {
 app.post("/tool", async (req, res) => {
   const { query } = req.body || {};
   console.log("📞 Incoming query:", query);
+  console.log("✅ Live call received from Vapi at", new Date().toISOString());
 
   const answer = matchQuery(query);
   res.json({ answer });
