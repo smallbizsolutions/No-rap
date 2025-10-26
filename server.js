@@ -18,7 +18,7 @@ const knowledgeBase = {
 function matchQuery(text = "") {
   const q = text.toLowerCase();
 
-  // Hours — wider variety of phrases
+  // Hours
   if (
     q.includes("hour") ||
     q.includes("open") ||
@@ -37,7 +37,8 @@ function matchQuery(text = "") {
     return knowledgeBase.location;
 
   // Gluten-free
-  if (q.includes("gluten") || q.includes("celiac")) return knowledgeBase.glutenfree;
+  if (q.includes("gluten") || q.includes("celiac"))
+    return knowledgeBase.glutenfree;
 
   // Contact
   if (q.includes("contact") || q.includes("phone") || q.includes("number"))
@@ -53,11 +54,20 @@ function matchQuery(text = "") {
 
 // 🚀 POST /tool — endpoint Vapi calls
 app.post("/tool", async (req, res) => {
-  const { query } = req.body || {};
-  console.log("📞 Incoming query:", query);
-  console.log("✅ Live call received from Vapi at", new Date().toISOString());
+  // Handle both plain and nested request formats
+  const query = req.body?.query || req.body?.parameters?.query;
+  console.log("📞 Live call received from Vapi at", new Date().toISOString());
+  console.log("💬 Incoming query:", query);
+
+  if (!query) {
+    console.log("⚠️ No query received from Vapi request body:", req.body);
+    return res.json({
+      answer: "I didn’t quite catch that. Could you repeat your question?"
+    });
+  }
 
   const answer = matchQuery(query);
+  console.log("🧠 Responding with:", answer);
   res.json({ answer });
 });
 
