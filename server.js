@@ -7,7 +7,7 @@ app.use(express.json());
 
 // 🧠 Simple internal knowledge base
 const knowledgeBase = {
-  hours: "Our business hours are Monday through Friday, from 9 AM to 5 PM.",
+  hours: "Our business hours are Monday through Friday, from 7 AM to 5 PM.",
   location: "We’re located at 123 Main Street, Saline, Michigan.",
   glutenfree: "Yes! We offer gluten-free cupcakes and bread.",
   contact: "You can reach us at (734) 555-1212.",
