@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vapi Conversational Widget Demo</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        #instructions {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to The Demo Diner!</h1>
+    <p>
+        This page is a demonstration of the Vapi Conversational Widget. Click the **floating icon** in the bottom right corner to speak with our 90s-themed AI assistant. Ask about our hours, location, or today's specials!
+    </p>
+
+    <div id="instructions">
+        <h2>Vapi Widget Integration</h2>
+        <p>The entire widget is added via the code snippet below, right here in the body.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"></script>
+    
+    <vapi-widget 
+        public-key="YOUR_VAPI_PUBLIC_KEY" 
+        assistant-id="YOUR_ASSISTANT_ID_FROM_VAPI"
+    ></vapi-widget>
+
+</body>
+</html>
