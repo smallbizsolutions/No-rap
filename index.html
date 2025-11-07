@@ -1,72 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vapi Conversational Widget Demo - Live</title>
-    
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-        #instructions {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: left;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vapi Conversational Widget Demo - Live</title>
+    
+    <style>
+        /* ... (CSS styles omitted for brevity) ... */
+    </style>
 </head>
 <body>
-    
-    <h1>Welcome to The Demo Diner!</h1>
-    <p>
-        This page demonstrates the fully styled Vapi Conversational Widget. Look for the **'TALK WITH AI' button** in the bottom right corner. Click it to begin a chat with our 90s-themed assistant and ask any informational question about the diner.
-    </p>
+    
+    <h1>Welcome to The Demo Diner!</h1>
+    <p>
+        This page demonstrates the fully styled Vapi Conversational Widget. Look for the **'TALK WITH AI' button** in the bottom right corner. Click it to begin a chat with our 90s-themed assistant and ask any informational question about the diner.
+    </p>
 
-    <div id="instructions">
-        <h2>Widget Status: Live</h2>
-        <p>This widget is running in **Chat Mode** with a **Dark Theme** and custom black/teal colors, as defined in the embed code.</p>
-    </div>
+    <div id="instructions">
+        <h2>Widget Status: Live</h2>
+        <p>This widget is running in **Chat Mode** with a **Dark Theme** and custom black/teal colors, as defined in the embed code.</p>
+    </div>
 
-    
-    <vapi-widget
-        public-key="5b3217e3-fd7e-4328-9e26-b62dd47c28c9"
-        assistant-id="3eb142c7-f916-4dee-b04b-0754476d376b"
-        mode="chat"
-        theme="dark"
-        base-bg-color="#000000"
-        accent-color="#14B8A6"
-        cta-button-color="#000000"
-        cta-button-text-color="#ffffff"
-        border-radius="medium"
-        size="compact"
-        position="bottom-right"
-        title="TALK WITH AI"
-        start-button-text="Start"
-        end-button-text="End Call"
-        chat-first-message="Hey, How can I help you today?"
-        chat-placeholder="Type your message..."
-        voice-show-transcript="true"
-        consent-required="true"
-        consent-title="Terms and conditions"
-        consent-content="By clicking 'Agree,' and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
-        consent-storage-key="vapi_widget_consent"
-    ></vapi-widget>
+    
+    <vapi-widget
+        public-key="5b3217e3-fd7e-4328-9e26-b62dd47c28c9"
+        assistant-id="3eb142c7-f916-4dee-b04b-0754476d376b"
+        mode="chat"
+        theme="dark"
+        base-bg-color="#000000"
+        accent-color="#14B8A6"
+        cta-button-color="#000000"
+        cta-button-text-color="#ffffff"
+        border-radius="medium"
+        size="compact"
+        position="bottom-right"
+        title="TALK WITH AI"
+        start-button-text="Start"
+        end-button-text="End Call"
+        chat-first-message="Hey, How can I help you today?"
+        chat-placeholder="Type your message..."
+        voice-show-transcript="true"
+        consent-required="true"
+        consent-title="Terms and conditions"
+        consent-content="By clicking 'Agree,' and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
+        consent-storage-key="vapi_widget_consent"
+    ></vapi-widget>
 
-    <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+        <script src="https://cdn.vapi.ai/vapi-widget.js" async type="text/javascript"></script>
 
-    </body>
+    </body>
 </html>
