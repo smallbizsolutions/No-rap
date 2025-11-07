@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vapi Widget Embedded</title>
     <style>
-        /* A little style just so you know the page loaded */
         body {
             font-family: Arial, sans-serif;
             margin: 50px;
@@ -18,29 +17,33 @@
     <h1>Vapi Chat Widget Test Page</h1>
     <p>Look for the 'chat' button in the bottom right corner.</p>
     
-    <vapi-widget
-        public-key="5b3217e3-fd7e-4328-9e26-b62dd47c28c9"
-        assistant-id="3eb142c7-f916-4dee-b04b-0754476d376b"
-        mode="chat"
-        theme="dark"
-        base-bg-color="#000000"
-        accent-color="#14B8A6"
-        cta-button-color="#50125c"
-        cta-button-text-color="#ffffff"
-        border-radius="medium"
-        size="compact"
-        position="bottom-right"
-        title="chat"
-        start-button-text="Start"
-        end-button-text="End Call"
-        chat-first-message="Hey, How can I help you today?"
-        chat-placeholder="Type your message..."
-        voice-show-transcript="true"
-        consent-required="true"
-        consent-title="Terms and conditions"
-        consent-content="By clicking 'Agree,' and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
-        consent-storage-key="vapi_widget_consent"
-    ></vapi-widget>
+    <div id="vapi-widget-container">
+    
+        <vapi-widget
+            public-key="5b3217e3-fd7e-4328-9e26-b62dd47c28c9"
+            assistant-id="3eb142c7-f916-4dee-b04b-0754476d376b"
+            mode="chat"
+            theme="dark"
+            base-bg-color="#000000"
+            accent-color="#14B8A6"
+            cta-button-color="#50125c"
+            cta-button-text-color="#ffffff"
+            border-radius="medium"
+            size="compact"
+            position="bottom-right"
+            title="chat"
+            start-button-text="Start"
+            end-button-text="End Call"
+            chat-first-message="Hey, How can I help you today?"
+            chat-placeholder="Type your message..."
+            voice-show-transcript="true"
+            consent-required="true"
+            consent-title="Terms and conditions"
+            consent-content="By clicking 'Agree,' and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as otherwise described in our Terms of Service."
+            consent-storage-key="vapi_widget_consent"
+        ></vapi-widget>
+
+    </div>
 
     <script src="https://cdn.vapi.ai/vapi-widget.js" async type="text/javascript"></script>
 
